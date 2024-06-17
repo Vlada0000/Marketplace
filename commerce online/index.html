@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="IT">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.7.0/nouislider.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Cicatrene</title>
+  </head>
+  <body class="roboto-condensed-carino">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container" id="y">
+        <a class="navbar-brand" href="#">
+          <h1>Cicatrene </h1>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Catalogo </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="#">Catalogo</a></li>
+                <li><a class="dropdown-item" href="#">Utenti</a></li>
+                <li><a class="dropdown-item" href="#">Centro Assistenza</a></li>
+              </ul>
+            </li>
+            <div class="search-bar">
+              <button class="search-btn"><i class="bi bi-search"></i></button>
+              <input id="ricerca" type="text" class="search-input" placeholder="Cerca articoli" />
+              <div id="suggestions" class="suggestions-container"></div>
+            </div>
+          </ul>
+          <ul class="navbar-nav ml-auto d-flex align-items-center">
+            <li class="nav-item">
+              <a class="nav-link" href="#"><i class="bi bi-envelope"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><i class="bi bi-bell"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><i class="bi bi-heart"></i></a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle rounded-circle bg-body-secondary me-2" href="#" id="navbarDropdownMenuLink2" role="button" data-bs-toggle="dropdown" aria-expanded="false"> V </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink2">
+                <li><a class="dropdown-item" href="#">Profilo</a></li>
+                <li><a class="dropdown-item" href="#">Impostazioni</a></li>
+                <li><a class="dropdown-item" href="#">Saldo</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a href="/backoffice.html" class="nav-link btn-vendi-subito">Vendi Subito</a>
+            </li>
+            <div class="position-relative">
+              <i class="bi bi-cart" id="cart-icon" style="cursor: pointer; font-size: 1.5rem;"></i>
+              <span class="badge badge-danger ml-2" id="cart-badge">0</span>
+            </div>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><i class="bi bi-question-circle"></i></a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink3" role="button" data-bs-toggle="dropdown" aria-expanded="false"> IT </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink3">
+                <li><a class="dropdown-item" href="#">Italiano (Italian)</a></li>
+                <li><a class="dropdown-item" href="#">Inglese (English)</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <main>
+      <section class="jumbotron container-fluid">
+        <div class="jumbotron-content row">
+          <div class="col-12">
+          <h1>Benvenuto su Cicatrene</h1>
+          <p>Scopri le ultime offerte sui tuoi prodotti preferiti</p>
+        </div>
+        </div>
+      </section>
+      <h1 class="text-center mt-3">Seleziona il tuo prodotto preferito</h1>
+      <div class="container" id="x">
+        <div class="categories">
+          <div class="filters">
+            <h3>Filtri di Ricerca:</h3>
+            <form id="filter-form">
+              <div class="form-group">
+                <label for="price-range">Prezzo:</label>
+                <div id="price-range" class="range-slider"></div>
+                <div class="price-display">
+                  <span id="min-price-display">0</span> - <span id="max-price-display">1000</span> €
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="color">Colore:</label>
+                <div class="color-options">
+                  <input type="radio" id="red" name="color" value="red">
+                  <label for="red" class="color-option red"></label>
+                  <input type="radio" id="blue" name="color" value="blue">
+                  <label for="blue" class="color-option blue"></label>
+                  <input type="radio" id="green" name="color" value="green">
+                  <label for="green" class="color-option green"></label>
+                </div>
+              </div>
+              <div class="category-list">
+                <h3>Categorie:</h3>
+                <ul>
+                  <li><a href="#bags" class="selected" onclick="selezionaCategoria(event)">Borse</a></li>
+                  <li><a href="#accessories" onclick="selezionaCategoria(event)">Accessori</a></li>
+                  <li><a href="#shoes" onclick="selezionaCategoria(event)">Scarpe</a></li>
+                  <li><a href="#watches" onclick="selezionaCategoria(event)">Orologi</a></li>
+                </ul>
+              </div>
+              <button type="submit">Applica Filtri</button>
+            </form>
+          </div>
+        </div>
+    
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="cartOffcanvas" aria-labelledby="cartOffcanvasLabel">
+          <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="cartOffcanvasLabel">Carrello</h5>
+              <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+              <ul class="list-group" id="cart-items"></ul>
+              <div class="d-flex justify-content-between align-items-center mt-3">
+                  <strong>Totale:</strong>
+                  <span id="total-price">0.00</span>
+              </div>
+              <div class="mt-3">
+                  <button class="btn btn-danger" onclick="svuotaCarrello()"><i class="bi bi-trash"></i></button>
+              </div>
+          </div>
+      </div>
+
+        <div id="product-carousel" class="swiper-container position-relative">
+          <div class="swiper-wrapper">
+          
+          </div>
+          
+          <div class="swiper-button-prev position-absolute"></div>
+          <div class="swiper-button-next position-absolute"></div>
+        </div>
+       
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__top">
+          <div class="footer__col">
+            <h4 class="footer__title">Esplora</h4>
+            <ul class="footer__list">
+              <li><a href="#" class="footer__link">Elettronica</a></li>
+              <li><a href="#" class="footer__link">Gadget</a></li>
+              <li><a href="#" class="footer__link">Casa</a></li>
+              <li><a href="#" class="footer__link">Giardino</a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <h4 class="footer__title">Assistenza</h4>
+            <ul class="footer__list">
+              <li><a href="#" class="footer__link">Contattaci</a></li>
+              <li><a href="#" class="footer__link">Spedizioni</a></li>
+              <li><a href="#" class="footer__link">Resi</a></li>
+              <li><a href="#" class="footer__link">FAQ</a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <h4 class="footer__title">Chi Siamo</h4>
+            <ul class="footer__list">
+              <li><a href="#" class="footer__link">La nostra storia</a></li>
+              <li><a href="#" class="footer__link">Lavora con noi</a></li>
+              <li><a href="#" class="footer__link">Blog</a></li>
+              <li><a href="#" class="footer__link">Privacy Policy</a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <h4 class="footer__title">Seguici</h4>
+            <ul class="footer__social-list">
+              <li><a href="#" class="footer__social-link"><i class="bi bi-facebook"></i></a></li>
+              <li><a href="#" class="footer__social-link"><i class="bi bi-twitter"></i></a></li>
+              <li><a href="#" class="footer__social-link"><i class="bi bi-instagram"></i></a></li>
+              <li><a href="#" class="footer__social-link"><i class="bi bi-youtube"></i></a></li>
+            </ul>
+          </div>
+        </div>
+        <hr class="footer__divider" />
+        <div class="footer__bottom">
+          <p class="footer__text">&copy; 2024 Cicatrene. Tutti i diritti riservati.</p>
+        </div>
+      </div>
+    </footer>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.7.0/nouislider.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+  </body>
+</html>

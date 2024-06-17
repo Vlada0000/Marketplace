@@ -1,0 +1,432 @@
+
+
+.roboto-condensed-carino {
+  font-family: "Roboto Condensed", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+
+ 
+  .search-bar {
+    
+    display: flex;
+
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  
+  .search-btn {
+    
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+  }
+  
+  .search-input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    outline: none;
+   
+  }
+
+.jumbotron {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #333; 
+    background-image: url('/Cascata_Rovinaccia_Canevare-06.jpg.webp'); 
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+  }
+  
+
+  .jumbotron-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    width: 100%;
+    padding: 0 20px;
+  }
+  
+  .jumbotron-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .jumbotron-content p {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+  }
+  
+ 
+  .foto-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    opacity: 0.4; 
+    background-color: #000; 
+  }
+  
+  .foto-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    opacity: 0.6; 
+  }
+  
+ 
+  @media (max-width: 768px) {
+    .jumbotron-content h1 {
+      font-size: 2.5rem;
+    }
+  
+    .jumbotron-content p {
+      font-size: 1.2rem;
+    }
+  }
+  
+
+  @media (max-width: 576px) {
+    .jumbotron-content h1 {
+      font-size: 2rem;
+    }
+  
+    .jumbotron-content p {
+      font-size: 1rem;
+    }
+  }
+    
+
+
+#x, #y, #z, #w {
+   
+
+    display: flex;
+    max-width: 1200px;
+    margin: 50px auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.categories, .products {
+
+    padding: 30px;
+}
+
+.categories {
+    background-color: #f8f8f8;
+}
+
+h2, h3 {
+    color: #333;
+}
+
+.filters {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #666;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus {
+    border-color: #65a8d1;
+    outline: none;
+}
+
+button {
+    
+    color: black;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #4b8da8;
+}
+
+.price-display {
+    margin-top: 10px;
+}
+
+.color-options {
+    display: flex;
+}
+
+.color-option {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.red {
+    background-color: red;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.green {
+    background-color: green;
+}
+
+.color-options {
+    display: flex;
+    align-items: center;
+}
+
+.color-option {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.color-option:hover {
+    border-color: #333;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+input[type="radio"]:checked + .color-option {
+    border-color: #333;
+}
+.noUi-target {
+    margin-top: 15px;
+}
+
+.card {
+    border:none;
+    
+}
+.swiper-slide img {
+    max-height: 200px; 
+    object-fit: cover; 
+}
+
+.swiper-container {
+    overflow: hidden; 
+}
+
+.swiper-slide {
+    width: auto !important; 
+    display: flex !important; 
+    justify-content: center; 
+}
+
+.swiper-slide .card {
+    max-width: 300px; 
+    width: 100%;
+    height: auto; 
+    margin: 0 10px; 
+}
+.category-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+.category-list li {
+
+    margin-right: 15px;
+}
+.category-list a {
+    text-decoration: none;
+    color: #000;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+.category-list a.selected {
+    font-weight: bold;
+    color: #fff;
+    background-color: #007bff;
+}
+
+.btn-vendi-subito {
+    background-color: green;
+    color: white;
+    font-size: 0.875rem; 
+    padding: 0.25rem 0.5rem; 
+    border-radius: 0.2rem; 
+}
+.btn-vendi-subito:hover {
+    background-color: darkgreen;
+}
+
+.suggestions-container {
+    position: absolute;
+    background: white;
+    border: 1px solid #ccc;
+    width: 100%;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 1000;
+    display: none; 
+}
+
+.suggestions-container.visible {
+    display: block; 
+}
+
+.suggestion-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.suggestion-item:hover {
+    background-color: #f0f0f0;
+}
+
+.suggestion-image {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin-right: 10px;
+    border-radius: 4px;
+}
+
+.suggestion-text {
+    flex-grow: 1;
+    font-size: 14px;
+}
+
+
+#ricerca {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 5px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+
+.suggestions-container {
+    top: 100%; 
+    left: 0;
+    right: 0;
+}
+.position-relative {
+    position: relative;
+}
+
+#cart-icon {
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+#cart-badge {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 0.25em 0.5em;
+    font-size: 0.75rem;
+    display: inline-block;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cart-item img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin-right: 10px;
+}
+.footer__top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.footer__col {
+  flex: 1;
+}
+
+.footer__title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.footer__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer__link {
+  text-decoration: none;
+  color: #333;
+}
+
+.footer__link:hover {
+  text-decoration: underline;
+}
+
+.footer__divider {
+  margin: 20px 0;
+  border: 1px solid #ccc;
+}
+
+.footer__bottom {
+  text-align: center;
+}
+
+.footer__text {
+  font-size: 14px;
+  color: #666;
+}
+.footer__social-list {
+  list-style-type: none;
+ 
+}
+.footer__social-link {
+  color:black;
+}
